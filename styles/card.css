@@ -1,0 +1,115 @@
+/* Anki Card Styles for French Vocabulary */
+
+.card {
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #1a1a1a;
+  background-color: #fefefe;
+  padding: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Front side */
+.word {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.part-of-speech {
+  font-size: 1rem;
+  font-style: italic;
+  color: #7f8c8d;
+  margin-bottom: 1rem;
+}
+
+/* Divider */
+#answer {
+  border: none;
+  border-top: 2px solid #e0e0e0;
+  margin: 1.5rem 0;
+}
+
+/* Back side */
+.definition {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #27ae60;
+  margin-bottom: 1.5rem;
+}
+
+.example,
+.notes {
+  text-align: left;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.example {
+  border-left: 4px solid #3498db;
+}
+
+.notes {
+  border-left: 4px solid #9b59b6;
+}
+
+.label {
+  font-weight: 600;
+  color: #555;
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Dark mode support (for Anki's night mode) */
+.nightMode .card,
+.night_mode .card {
+  color: #e0e0e0;
+  background-color: #1e1e1e;
+}
+
+.nightMode .word,
+.night_mode .word {
+  color: #74b9ff;
+}
+
+.nightMode .part-of-speech,
+.night_mode .part-of-speech {
+  color: #a0a0a0;
+}
+
+.nightMode #answer,
+.night_mode #answer {
+  border-top-color: #444;
+}
+
+.nightMode .definition,
+.night_mode .definition {
+  color: #55efc4;
+}
+
+.nightMode .example,
+.nightMode .notes,
+.night_mode .example,
+.night_mode .notes {
+  background-color: #2d2d2d;
+}
+
+.nightMode .label,
+.night_mode .label {
+  color: #b0b0b0;
+}

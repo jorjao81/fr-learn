@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Deno
+.deno/
+
+# Output
+output/
+
+# Lock files
+deno.lock
+package-lock.json

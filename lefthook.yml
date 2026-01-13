@@ -1,0 +1,41 @@
+# https://github.com/evilmartians/lefthook
+
+pre-commit:
+  parallel: true
+  commands:
+    deno-fmt:
+      glob: "*.{ts,json}"
+      run: deno fmt --check {staged_files}
+      stage_fixed: true
+
+    deno-lint:
+      glob: "*.ts"
+      run: deno lint {staged_files}
+
+    prettier-md:
+      glob: "*.md"
+      run: npx prettier --check {staged_files}
+      stage_fixed: true
+
+    prettier-html:
+      glob: "templates/**/*.html"
+      run: npx prettier --check {staged_files}
+      stage_fixed: true
+
+    prettier-css:
+      glob: "styles/**/*.css"
+      run: npx prettier --check {staged_files}
+      stage_fixed: true
+
+    markdownlint:
+      glob: "*.md"
+      run: npx markdownlint-cli2 {staged_files}
+
+    markdown-links:
+      glob: "*.md"
+      run: lychee --offline {staged_files}
+
+pre-push:
+  commands:
+    deno-check:
+      run: deno task check
